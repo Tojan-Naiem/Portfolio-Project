@@ -1,0 +1,11 @@
+@import '../utils/variables';
+
+body{
+    font-family: $font-primary;
+    background-color: $primary-color;
+    color: $font-color;
+    height: 100vh;
+}
+button{
+    font-family: $font-primary;
+}
