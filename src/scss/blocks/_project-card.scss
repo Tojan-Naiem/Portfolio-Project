@@ -1,0 +1,60 @@
+@import '../utils/variables';
+.project-card{
+background-color: $lighter-primary;  
+border-radius: $primary-border-radius; 
+transition: all 0.5s ease-in-out; 
+position: relative;
+height: 100%;
+    &__img {
+        width: 100%;
+        height: 60%;
+border-top-left-radius: $primary-border-radius; 
+border-top-right-radius: $primary-border-radius;  
+ 
+
+    }
+    &__title{
+        padding: 5px 10px;
+    }
+    &__description{
+        padding: 5px 10px;
+    }
+    &__link{
+        padding: 10px 10px;
+        position: absolute;
+        bottom: 0;
+        font-weight: bold;
+        text-decoration: underline;
+        color:$link-font-color;
+    }
+    @include respond(phone){
+        &__description{
+            font-size: $phone-font-size-paragraph;
+        }
+        &__link{
+            font-size: $phone-font-size-paragraph;
+        }
+        
+    }
+    @include respond(tablet){
+      
+    }
+    // @include respond(pc){
+      
+    // }
+    // @include respond(pcLarge){
+      
+    
+    // }
+  
+
+
+    
+    
+    
+    
+    
+}
+.project-card:hover{
+transform: scale(1.02);
+}

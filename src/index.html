@@ -16,36 +16,77 @@
 </head>
 
 <body id="body">
-  <header class="header">
+  <header class="header" id="header">
     <nav class="header__nav">
-       <a href="#" class="header__menu-logo"><i  class="fa-solid fa-bars" ></i></a>
+       <button id="menu-button" aria-label="Menu button" onclick="openSidebar()" class="header__menu-icon"><i  class="fa-solid fa-bars" ></i></button>
         <ul class="header__menu">
             <li class="header__menu-item"><a class="header__link" href="#">Home</a></li>
             <li class="header__menu-item"><a class="header__link" href="#">Projects</a></li>
             <li class="header__menu-item"><a class="header__link" href="#">Skills</a></li>
             <li class="header__menu-item"><a class="header__link" href="#">Contact Link</a></li>
+            <li class="header__menu-item"><a class="header__link" href="#">Resume</a></li>
+
         </ul>
-        <button class="header__resume-button">Resume</button>
     </nav>
-    
+    <aside id="my-sidepanel" class="header__sidepanel" >
+      <ul class="header__sidepanel-menu">
+        <li class=" header__sidepanel-item"><a  href="#">Home</a></li>
+        <li class=" header__sidepanel-item"><a href="#">Projects</a></li>
+        <li class=" header__sidepanel-item"><a  href="#">Skills</a></li>
+        <li class=" header__sidepanel-item"><a  href="#">Contact Link</a></li>
+    </ul>
+</aside>
   </header>
+ 
   <main id="main">
     <section id="bio" class="bio">
-        <div class="bio__profile-image">
-        </div>
-        <h1  class="bio__main-heading">Welcome,I'm Tojan Abugholah <span>Backend Engineer</span></h1>
-        <p class="bio__descreption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore reiciendis eligendi voluptatem mollitia deserunt similique, aspernatur quas dicta molestiae dolorem sunt quam fugiat! Ipsam at expedita adipisci, officiis odio aliquid!</p>
+      <div class="bio__profile-image">
+      </div>
+      <div class="bio__content">
+        <h1  class="bio__main-heading">Welcome,<br>I'm Tojan Abugholah <br> <span>Backend Engineer</span></h1>
+        <p class="bio__description">Backend Developer specializing in Python and web technologies.  
+          Currently a 3rd-year Computer Science student at Al-Hodoud University.</p>
         <div class="bio__buttons">
-            <button class="button">Contact me</button>
-            <button class="button">here me</button>
-
+            <button class="button button__contact">Contact me</button>
+            <button class="button button__hire">Hire me</button>
         </div>
+      </div>
+      
+      
+       
     </section>
     <section id="latest-projects" class="latest-projects">
+      <h2 class="latest-projects__title">Latest Projects</h2>
+      <div class="latest-projects__cards">
+        <div class="project-card">
+          <img class="project-card__img" src="img/gaming-website-project.png" alt="Gaming Website">
+          <h3 class="project-card__title">Gaming Project</h3>
+          <p class="project-card__description">A dynamic gaming website featuring the latest game reviews, news</p>
+          <a href="#" class="project-card__link" >Go to project</a>
+
+        </div>
+        <div class="project-card">
+          <img class="project-card__img" src="img/landing-page-project.png" alt="Landing page Website">
+          <h3 class="project-card__title">Landing page  Project</h3>
+          <p class="project-card__description">A sleek, modern gaming website landing page . Designed with bold visuals. Fully responsive across all devices.</p>
+          <a href="#" class="project-card__link" >Go to project</a>
+        </div>
+        <div class="project-card">
+          <img class="project-card__img" src="img/header-project.png" alt="Simple header Website">
+          <h3 class="project-card__title">Simple header Project</h3>
+          <p class="project-card__description">A clean navigation header with logo and user login button. Sticky on scroll with subtle hover effects for better UX.</p>
+          <a href="#" class="project-card__link" >Go to project</a>
+
+        </div>
+
+      </div>
     </section>
   </main>
   <footer class="footer">
+    &copy; Tojan AbuGholah 2025
   </footer>
+  <script src="script.js"></script>
+
 </body>
 
 </html>

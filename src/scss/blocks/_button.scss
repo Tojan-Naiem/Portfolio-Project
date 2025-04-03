@@ -1,0 +1,43 @@
+@import '../utils/variables';
+
+.button{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: $primary-border-radius;
+    border: none;
+    transition: 1s all ease-in-out;
+    &__contact{
+        background-color: $button-bg-color;
+        margin-right: 10px;
+    }
+    &__hire{
+        background-color: $button-bg-secondary-color;
+        color: white;
+    }
+    @include respond(phone){
+        width: 100px;
+        height: 30px;
+       
+    
+    }
+    @include respond(tablet){
+        width: 100px;
+        height: 30px;
+    
+    
+    }
+    // @include respond(pc){
+      
+    // }
+    // @include respond(pcLarge){
+      
+    
+    // }
+    
+    
+}
+.button:hover{
+    background-color: $darker-secondary;
+    transform: scale(1.1);
+}

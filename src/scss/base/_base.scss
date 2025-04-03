@@ -9,3 +9,7 @@ body{
 button{
     font-family: $font-primary;
 }
+button:focus,a:focus{
+    outline: 3px solid $darker-secondary; 
+    outline-offset: 2px;
+  }
