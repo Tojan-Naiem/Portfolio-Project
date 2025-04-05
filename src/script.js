@@ -1,3 +1,5 @@
+// I use here js for open the berger menu couse it easeier to 
+
 function openSidebar(){
     var sidebar= document.getElementById('my-sidepanel');
     toggleBtn=document.getElementById('menu-button');
@@ -11,20 +13,13 @@ else {
 }
    
 }
+
+// here I add js code for minimize the header bc it easier
+
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
-    if (window.scrollY >500) {
-       header.style.height='70px';
-    } else {
-        header.style.height='100px';
-    }
+    if (window.scrollY >500) header.style.height='70px';
+     else  header.style.height='100px';
+    
  });
 
- document.addEventListener('scroll', function() {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(el => {
-      if (isElementInViewport(el)) {
-        el.classList.add('visible');
-      }
-    });
-  });

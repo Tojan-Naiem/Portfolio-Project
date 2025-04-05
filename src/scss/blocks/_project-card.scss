@@ -1,4 +1,4 @@
-@import '../utils/variables';
+@use '../utils/variables' as *;
 .project-card{
 background-color: $lighter-primary;  
 border-radius: $primary-border-radius; 

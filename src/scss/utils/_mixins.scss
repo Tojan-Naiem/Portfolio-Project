@@ -1,32 +1,46 @@
-
 $layout-breakpoint-small: 480px;
 $layout-breakpoint-meduim: 787px;
 $layout-breakpoint-large: 1200px;
 
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin bg-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin respond($breakpoint) {
+  @if($breakpoint==phone) {
+    @media (max-width: $layout-breakpoint-small) {
+      @content;
+    }
   }
-@mixin respond($breakpoint){
-    @if($breakpoint==phone){
-        @media (max-width: $layout-breakpoint-small) {
-                  @content; 
-     }
+
+  @if($breakpoint==tablet) {
+    @media (min-width: #{$layout-breakpoint-small + 1}) and (max-width: #{$layout-breakpoint-meduim - 0.01px}) {
+      @content;
     }
-    @if($breakpoint==tablet){
-        @media (min-width: #{$layout-breakpoint-small + 1}) and (max-width: #{$layout-breakpoint-meduim - 0.01px}) {
-                 @content; 
-                }
+  }
+
+  @if($breakpoint==pc) {
+    @media (min-width: $layout-breakpoint-meduim) and (max-width: $layout-breakpoint-large) {
+      @content;
     }
-    @if($breakpoint==pc){
-        @media (min-width: $layout-breakpoint-meduim) and (max-width: $layout-breakpoint-large) {
-                  @content; 
-                }
+  }
+
+  @if($breakpoint==pcLarge) {
+    @media (min-width: $layout-breakpoint-large) {
+      @content;
     }
-    @if($breakpoint==pcLarge){
-        @media (min-width: $layout-breakpoint-large) {
-                  @content; 
-               }
-    }
+  }
 }

@@ -1,4 +1,4 @@
-@import '../utils/variables';
+@use '../utils/variables' as *;
 
 .button{
     width: 200px;
@@ -11,9 +11,12 @@
         background-color: $button-bg-color;
         margin-right: 10px;
     }
-    &__hire{
+    &__project-section{
         background-color: $button-bg-secondary-color;
         color: white;
+    }
+    &__view-project{
+        margin-top: 10px;
     }
     @include respond(phone){
         width: 100px;
@@ -27,14 +30,7 @@
     
     
     }
-    // @include respond(pc){
-      
-    // }
-    // @include respond(pcLarge){
-      
-    
-    // }
-    
+ 
     
 }
 .button:hover{

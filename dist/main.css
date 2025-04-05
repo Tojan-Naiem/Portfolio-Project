@@ -25,8 +25,8 @@ button {
 }
 
 button:focus, a:focus {
-  outline: 3px solid #ff0505;
-  outline-offset: 2px;
+  outline: 1px solid #ff0505;
+  outline-offset: 3px;
 }
 
 .header {
@@ -38,9 +38,8 @@ button:focus, a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  padding: 0 50px;
+  border-radius: 0 0 20px 20px;
   border-bottom: 1px solid #FF6B6B;
   box-shadow: 1px 1px 5px #FF6B6B;
   z-index: 1000;
@@ -94,7 +93,7 @@ button:focus, a:focus {
 .header__sidepanel-menu {
   width: 100%;
 }
-.header__sidepanel-item {
+.header__sidepanel-link {
   width: 100%;
   padding: 10px;
   display: flex;
@@ -102,8 +101,9 @@ button:focus, a:focus {
   align-items: center;
   border-radius: 5px;
   transition: all 0.5 ease-in-out;
+  margin-bottom: 10px;
 }
-.header__sidepanel-item:hover {
+.header__sidepanel-link:hover {
   background-color: #1A1A1A;
 }
 @media (max-width: 480px) {
@@ -142,7 +142,7 @@ button:focus, a:focus {
   margin-top: 100px;
   width: 100%;
   height: 100vh;
-  padding: 100px 50px;
+  padding: calc(50px * 2) 50px;
   background: url("../src/img/background.jpg");
   background-position: center;
   background-size: cover;
@@ -153,17 +153,15 @@ button:focus, a:focus {
   transition: all 0.5 ease-in-out;
 }
 .bio__profile-image {
-  background: url("../src/img/profile-img.jpg");
   width: 400px;
   height: 400px;
+  background: url("../src/img/profile-img.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50%;
   border: 5px solid #FF6B6B;
   animation: profile-img 2s ease-in-out infinite;
-}
-.bio__profile-image:hover {
-  transform: scale(1.1);
 }
 @keyframes profile-img {
   0%, 100% {
@@ -172,9 +170,6 @@ button:focus, a:focus {
   50% {
     transform: translateY(-20px);
   }
-}
-.bio__profile-image:hover {
-  transform: scale(1.1);
 }
 .bio__main-heading {
   font-size: 50px;
@@ -191,6 +186,7 @@ button:focus, a:focus {
   .bio__profile-image {
     width: 200px;
     height: 200px;
+    animation: none;
   }
   .bio__description {
     font-size: 10px;
@@ -200,15 +196,10 @@ button:focus, a:focus {
   .bio {
     grid-template-columns: 1fr;
   }
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
+  .bio__profile-image {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .button {
@@ -223,9 +214,12 @@ button:focus, a:focus {
   background-color: #FFFFFF;
   margin-right: 10px;
 }
-.button__hire {
+.button__project-section {
   background-color: #FF6B6B;
   color: white;
+}
+.button__view-project {
+  margin-top: 10px;
 }
 @media (max-width: 480px) {
   .button {
@@ -247,12 +241,18 @@ button:focus, a:focus {
 
 .latest-projects {
   padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5 ease-in-out;
 }
 .latest-projects__cards {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+  transition: all 0.5 ease-in-out;
 }
 @media (max-width: 480px) {
   .latest-projects__cards {
@@ -307,4 +307,22 @@ button:focus, a:focus {
 }
 .project-card:hover {
   transform: scale(1.02);
+}
+
+.bio-links__contact, .bio-links__projects {
+  border-radius: 20px;
+  padding: 10px;
+  transition: 1s all ease-in-out;
+}
+.bio-links__contact {
+  background-color: #FFFFFF;
+  margin-right: 10px;
+  color: black;
+}
+.bio-links__projects {
+  background-color: #FF6B6B;
+  color: white;
+}
+.bio-links__contact:hover, .bio-links__projects:hover {
+  background-color: #ff0505;
 }/*# sourceMappingURL=main.css.map */

@@ -1,33 +1,36 @@
-@import '../utils/variables';
-.latest-projects{
-     padding: 100px $main-padding;
-     &__cards{
+@use '../utils/variables' as *;
+
+.latest-projects {
+   padding: 100px $main-padding;
+   @include flex-center;
+   flex-direction: column;
+   transition: all 0.5 ease-in-out;
+
+   &__cards {
       margin-top: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-     }
-     @include respond(phone){
-      &__cards{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      transition: all 0.5 ease-in-out;
+   }
+
+   @include respond(phone) {
+      &__cards {
          grid-template-columns: 1fr;
-        
       }
-  }
-  @include respond(tablet){
-   &__cards{
-      grid-template-columns: 1fr;
-     
-   }  
-  
-  }
-  @include respond(pc){
-   &__cards{
-      grid-template-columns: 1fr;
-     
-   } 
-  }
-  // @include respond(pcLarge){
-    
-  
-  // }
+   }
+
+   @include respond(tablet) {
+      &__cards {
+         grid-template-columns: 1fr;
+      }
+
+   }
+
+   @include respond(pc) {
+      &__cards {
+         grid-template-columns: 1fr;
+      }
+   }
+
 }

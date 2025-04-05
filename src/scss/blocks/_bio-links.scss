@@ -1,0 +1,29 @@
+@use '../utils/variables' as *;
+
+
+.bio-links {
+
+    &__contact,
+    &__projects {
+        border-radius: $primary-border-radius;
+        padding: 10px;
+        transition: 1s all ease-in-out;
+    }
+
+    &__contact {
+        background-color: $button-bg-color;
+        margin-right: 10px;
+        color: black;
+    }
+
+    &__projects {
+        background-color: $button-bg-secondary-color;
+        color: white;
+    }
+
+    &__contact:hover,
+    &__projects:hover {
+        background-color: $darker-secondary;
+    }
+
+}

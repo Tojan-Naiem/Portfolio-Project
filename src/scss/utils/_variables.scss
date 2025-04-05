@@ -1,27 +1,32 @@
-$primary-color:#1A1A1A;
-$secondary-color:#FF6B6B;
+// Colors
+
+$primary-color: #1A1A1A;
+$secondary-color: #FF6B6B;
 $darker-secondary: darken($secondary-color, 20%);
 $lighter-primary: lighten($primary-color, 10%);
 
-$font-color:#FFFFFF;
-$link-font-color:#2563eb;
+// Fonts
+$main-heading-font-size: 50px;
+$phone-font-size-paragraph: 10px;
+$font-color: #FFFFFF;
+$link-font-color: #2563eb;
 $font-primary: 'Open Sans', Helvetica, sans-serif;
-$main-shadow:1px 1px 5px $secondary-color;
 
+// Main Shadow
+$main-shadow: 1px 1px 5px $secondary-color;
 
-$main-padding:50px;
-$main-heading-font-size:50px;
+// Main padding
+$main-padding: 50px;
 
+// header
+$bg-sidepanel-color: $secondary-color;
+$bg-hover-sidepanel-color: $primary-color;
 
-
-$primary-border-radius:20px;
+// Border Radius
+$primary-border-radius: 20px;
+$secondary-border-radius: 5px;
 
 
 // Button
-$button-bg-color:#FFFFFF;
-$button-bg-secondary-color:$secondary-color;
-
-
-//font sixe
-
-$phone-font-size-paragraph:10px;
+$button-bg-color: #FFFFFF;
+$button-bg-secondary-color: $secondary-color;

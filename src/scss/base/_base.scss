@@ -1,4 +1,4 @@
-@import '../utils/variables';
+@use '../utils/variables' as *;
 
 body{
     font-family: $font-primary;
@@ -10,6 +10,6 @@ button{
     font-family: $font-primary;
 }
 button:focus,a:focus{
-    outline: 3px solid $darker-secondary; 
-    outline-offset: 2px;
+    outline: 1px solid $darker-secondary; 
+    outline-offset: 3px;
   }
